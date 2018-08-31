@@ -1,0 +1,21 @@
+
+
+body {
+	font-family: PT Sans;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+a {
+	text-decoration: none;
+}
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+}
+
+.book-world {
+	width: 1152px;
+	margin: 20px auto 0;
+}

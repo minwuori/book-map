@@ -1,0 +1,22 @@
+/*карта*/
+.book-world__map {
+	width: 1152px;
+	margin: 0 auto;
+}
+#book-map {
+	display: flex;
+	left: 0;
+	right: 0;
+	width: 1152px;
+	height: 700px;
+	margin: 0 auto;		
+}
+
+#book-map.map {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 1152px;
+	height: 700px;
+	margin: 0 auto;	
+}

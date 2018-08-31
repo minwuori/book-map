@@ -1,0 +1,50 @@
+
+/*карточки*/
+.book-world__collection {
+	position: relative;
+	left: 271px;
+	top: -1182px; 
+	z-index: 1;
+ 	width: 882px;	
+ 	height: 479px;
+	background: white;
+	box-shadow: 9px -1px 33px -21px #000000;
+	padding: 25px;
+}
+
+.book-world__collection[data-hidden] {
+	margin-bottom: -100%;
+}
+
+.collection__header {
+	display: flex;
+	margin-bottom: 31px;
+}
+
+.collection__img{ 
+	margin-right: 19px;	
+}
+
+.collection__name{
+	font-family: PT Sans;
+	font-size: 24px;
+	width: 73%;
+	color: #26A9E0;
+	font-weight: bold;
+}
+
+.collection__link {
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 19px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.close {
+	margin-left: 55px;
+	
+}
+
+.collection__books {
+	display: flex;
+}

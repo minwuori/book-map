@@ -1,0 +1,147 @@
+/*фильтр*/
+.book-world__filters {
+	position: relative;
+	left: -2px;
+	top: -702px; 
+	z-index: 2;
+ 	width: 273px;	
+ 	height: 704px;
+	background: white;
+	box-shadow: 9px -1px 33px -24px #000000;
+}
+.filters {
+	padding-left: 28px;
+}
+
+.filters__text {
+	font-family: PT Sans;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+.filters__item:checked, 
+.filters__item:not(:checked) 
+{
+    position: absolute;
+    left: -9999px;
+}
+
+.filters__item:checked + label, 
+.filters__item:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+ 
+.filters__item:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+.filters__item:checked + label:before {
+	content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #26A9E0;
+    background-color: #26A9E0;
+    
+}
+
+.filters__item:checked + label:before, 
+.filters__item:not(:checked) + label:before {
+    border-radius: 2px;
+}
+
+
+.filters__item:checked + label:after, 
+.filters__item:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.filters__item:checked + label:after, 
+.filters__item:not(:checked) + label:after {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.filters__item:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.filters__item:checked + label:after {
+    opacity: 1;
+ }
+
+.filters__item:checked + label {
+    color: #26A9E0;
+}
+.filters div {
+	padding-top: 15px;
+}
+
+.filters__line {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	width: 200px;
+}
+
+.filters__search {
+	margin: 15px 0 6px 28px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	width: 169px;
+	
+}
+
+.filters__search input {
+	width: 140px;
+	font-family: Pt Sans;
+	font-size: 16px;
+	line-height: 21px;
+	color: rgba(0, 0, 0, 0.4);
+	border: none;
+	outline: none;
+	margin-bottom: 5px;
+}
+
+.filters__img {
+	position:relative;
+	padding-bottom: 0;
+	width: 18px;
+    height: 18px;
+    top: 5px;
+}
+
+.options {
+	margin-left: 52px;
+	margin-top: 22px;
+	font-family: PT Sans;
+	font-size: 16px;
+	line-height: 21px;
+	color: rgba(0, 0, 0, 0.8);
+	
+}

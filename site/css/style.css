@@ -1,0 +1,14 @@
+/* шрифты */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("data:application/octet-stream;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdQYWNpZmljbyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiBsb2NhbCgnUGFjaWZpY28gUmVndWxhcicpLCBsb2NhbCgnUGFjaWZpY28tUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3BhY2lmaWNvL3YxMi9Gd1pZNy1RbXkxNHU5bGV6Si02RDZNdy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQo=");
+
+/* стили */
+@import "base.css";
+@import "home.css";
+@import "map.css";
+@import "filter.css";
+@import "product-card.css";
+@import "collection.css";
