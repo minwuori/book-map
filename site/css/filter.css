@@ -129,6 +129,10 @@
 	margin-bottom: 5px;
 }
 
+.filters__search input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
 .filters__img {
 	position:relative;
 	padding-bottom: 0;
