@@ -38,9 +38,9 @@ geoObjects = [];
 //сама карта
 function init() {
     var map = new ymaps.Map('book-map', {
-        center: [44.5727, 56.6021],
+        center: [46.5259, 46.3514],
         controls: [],
-        zoom: 2.5
+        zoom: 5
     });
 
    for (var i=0; i < placemarks.length; i++) {

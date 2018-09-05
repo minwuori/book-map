@@ -1,11 +1,12 @@
 
 /*карточки*/
 .book-world__collection {
-	position: relative;
+	position: fixed;
 	left: 271px;
-	top: -1182px; 
-	z-index: 1;
- 	width: 882px;	
+	right: 0;
+	bottom: 0; 
+	/*z-index: 1;
+ 	width: 882px;	*/
  	height: 479px;
 	background: white;
 	box-shadow: 9px -1px 33px -21px #000000;
@@ -28,7 +29,7 @@
 .collection__name{
 	font-family: PT Sans;
 	font-size: 24px;
-	width: 73%;
+	width: 605px;
 	color: #26A9E0;
 	font-weight: bold;
 }

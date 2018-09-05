@@ -1,11 +1,12 @@
 /*фильтр*/
 .book-world__filters {
-	position: relative;
-	left: -2px;
-	top: -702px; 
-	z-index: 2;
+	position: fixed;
+	left: 0;
+	top: 0; 
+    bottom: 0;
+	/*z-index: 2;*/
  	width: 273px;	
- 	height: 704px;
+ 	/*height: 704px;*/
 	background: white;
 	box-shadow: 9px -1px 33px -24px #000000;
 }

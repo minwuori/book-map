@@ -4,29 +4,57 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	width: 1152px;
-	height: 700px; 
-	z-index: 1;
+	top: 0;
+	bottom: 0;
+	/*width: 1152px;*/
+	/*z-index: 300;*/
 	margin: auto;	
 	background: #000;
 	opacity: 0.5;
+	vertical-align:middle;
+    white-space: normal;
+}
+.logo {
+	position: relative;
+	width: 225px;
+	z-index: 1;
+	text-align: center;
+	margin: 25px auto 0;
+	vertical-align:middle;
+    white-space: normal;
 }
 
 .overlap {
-	display: flex; 
-	justify-content: center;
-}
-
-.info {
-	width: 660px;
-	height: 300px; 
+	/*width: 1152px;*/
 	z-index: 1;
-	margin: 25px auto 0;
+	margin: 0 auto;
+	height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0;
 }
 
-.info__logo {
-	text-align: center;
+.overlap:before {
+	height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
 }
+.info {
+ 	display: inline-block;
+    white-space: normal;
+    vertical-align: middle;
+    
+	margin: 45px auto 0;
+}
+
+
 
 .info__title {
 	font-size: 72px;
@@ -35,7 +63,6 @@
 	line-height: 93px;
 	text-align: center;
 	color: #ffffff;
-	margin-top: 67px;
 }
 
 .info__subtitle {
@@ -44,18 +71,16 @@
 	line-height: 31px;
 	text-align: center;
 	color: #ffffff;
-	margin-top: 4px;
+	margin-top: 10px;
 }
 
-/*.countries-blocks {
-	width: 882px; 
-	margin: 53px auto 0; 
-	display: flex; 
-	justify-content: flex-end;
-	
-}*/
+.countries-blocks {
+	width: 900px; 
+	margin: 60px auto 0; 
+}
 
 .countries-block {
+	display: inline-block;
 	z-index:1;
 	width: 150px;
 	height: 172px;
@@ -109,17 +134,21 @@
 	margin: auto;
 }
 
-.button_map {
+.button-map {
+	width: 225px;
 	background-color: #FDB812;
 	border: none;
     border-radius: 5px;
     color: white;
-    padding: 19px 40px;
+    padding: 19px 39px;
     text-align: center;
     text-decoration: none;
     font-family: PT Sans;
     font-size: 24px;
     line-height: 31px;
-    z-index: 1;
-    margin-top: 54px;
+    margin: 70px auto 0;
+}
+
+.button-map:hover {
+	cursor: pointer;
 }
