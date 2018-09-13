@@ -2,7 +2,7 @@
 
 $map_data = array(
   'writers' => array(
-    'title' => 'Писателей',
+    'title' => 'Писатели',
     'color' => "#ff0000",
     'marks' => array(
       array(
@@ -427,6 +427,9 @@ $map_data = array(
       ),
     )
   )
+
+  
+
 );
 
 ?>

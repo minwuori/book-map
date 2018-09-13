@@ -234,3 +234,33 @@
 
 
 /* end product-card */
+
+.button {
+    display: block;
+    height: 35px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    min-width: 108px;
+}
+
+.product-card__button {
+    height: 40px!important;
+    line-height: 40px;
+    display: inline-block;
+    margin: 0!important;
+    text-align: center;
+    font-size: inherit;
+    white-space: nowrap;
+    color: #fff;
+    border: none;
+}
+
+[data-status="buy"] {
+    background-color: #26A9E0;
+}
+
+[data-status="in-basket"] {
+    background-color: #8BC53F;
+}
