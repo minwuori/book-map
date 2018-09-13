@@ -1,3 +1,7 @@
+<?php
+  include './data/map-data.php';
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -17,10 +21,13 @@
 		<div class="filters"> 
 			<div class="filters__text">Показать:</div>
 			
-			<div class="filters__checkbox">
-				<input type="checkbox" class="filters__item" id="writers" />
-				<label for="writers">Писатели</label>
-			</div>
+			 <?php foreach($map_data as $name => $item) : ?>
+				<div class="filters__checkbox">
+					<input type="checkbox" class="filters__item" id="writers" data-collection="<?= $name; ?>" onclick="bookWorld.collections.toggle('<?= $name; ?>')"/>
+					<label for="writers"><?= $item['title'] ?></label>
+				</div>
+			<?php endforeach; ?>
+			
 			<div class="filters__checkbox">
 				<input type="checkbox" class="filters__item" id="guide" />
 				<label for="guide">Путеводители</label>
@@ -123,7 +130,11 @@
 
 	<script src="main.js" type="text/javascript"></script>
 
-
+	<script>
+    window.bookWorld = window.bookWorld || {};
+    bookWorld.collections.setData(<?= json_encode($map_data); ?>);
+    bookWorld.collections.toggle('writers');
+  </script>
 	
 
 </body>

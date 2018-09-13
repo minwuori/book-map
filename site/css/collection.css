@@ -11,6 +11,7 @@
 	background: white;
 	box-shadow: 9px -1px 33px -21px #000000;
 	padding: 25px;
+	display: none;
 }
 
 .book-world__collection[data-hidden] {
@@ -18,6 +19,7 @@
 }
 
 .collection__header {
+	min-width: 880px;
 	display: flex;
 	margin-bottom: 31px;
 }
@@ -29,7 +31,7 @@
 .collection__name{
 	font-family: PT Sans;
 	font-size: 24px;
-	width: 605px;
+	min-width: 605px;
 	color: #26A9E0;
 	font-weight: bold;
 }
@@ -41,7 +43,7 @@
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.close {
+.collection__close {
 	margin-left: 55px;
 	
 }

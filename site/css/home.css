@@ -42,9 +42,9 @@
 
 .overlap:before {
 	height: 100%;
-        display: inline-block;
-        vertical-align: middle;
-        content: '';
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
 }
 .info {
  	display: inline-block;

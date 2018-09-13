@@ -33,6 +33,8 @@ var placemarks = [
     }
 ];
 
+
+
 geoObjects = [];
 
 //сама карта
@@ -51,8 +53,8 @@ function init() {
 
         {
             iconLayout: 'default#image',
-            iconImageHref: 'img/marker.png',
-            iconImageSize: [14, 20],
+            iconImageHref: 'img/marker.svg',
+            iconImageSize: [28, 40],
             iconImageOffset: [-7, -20]
         });
         
@@ -61,8 +63,8 @@ function init() {
     var clusterer = new ymaps.Clusterer({
         clusterIcons: [
             {
-                href: 'img/marker.png',
-                size: [14, 20],
+                href: 'img/marker.svg',
+                size: [28, 40],
                 offset: [-7, -20]
             }
         ],
@@ -70,10 +72,23 @@ function init() {
     });
 
     map.geoObjects.add(clusterer);
-    clusterer.add(geoObjects)
+    clusterer.add(geoObjects);
+
+
+    placemarks.events.add('click', function () {
+        var obj = document.getElementByClass(book-world__collection);
+            //Если css-свойство display не block, то:
+            if (obj.style.display != "block") {
+                obj.style.display = "block"; //Показываем элемент
+            }else{
+                obj.style.display = "none";
+            } //Скрываем элемент
+    });
 }
 
-$('.close').click( function(){
+
+
+$('.collection__close').click( function(){
     $('.book-world__collection').hide();
 });
 
