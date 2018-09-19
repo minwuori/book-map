@@ -189,3 +189,13 @@
 	color: rgba(0, 0, 0, 0.8);
 	
 }
+
+.subfilters {
+	cursor: pointer;
+	color: black;
+	margin-top: 10px;
+}
+
+.subfilters_blue {
+	color: #26A9E0;
+}

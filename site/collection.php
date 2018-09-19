@@ -66,11 +66,12 @@
 			<div class="collection__header">
 				<img class="collection__img" src="img/marker.svg">
 				
+				
 				<div class="collection__name"></div>
 				
 
 				<a href="" class="collection__link">Посмотреть всё</a>
-				<a href="#" class="collection__close" data-close=".book-world__collection"><img src="img/close.svg"></a>
+				<div href="#" class="collection__close" data-close=".book-world__collection"><img src="img/close.svg"></div>
 			</div>
 
 			<div class="collection__books">

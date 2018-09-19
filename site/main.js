@@ -4,7 +4,7 @@ window.bookWorld = window.bookWorld || {};
 
 bookWorld.map = { // непосредственно карта
   id: 'book-map',
-  $: null,
+  subfilters: null,
   center: [ 41.9102411, 12.3955708 ],
   zoom: 5,// начальное увеличение
   type: "TERRAIN", // тип: физическая, политическая, гибрид
@@ -18,9 +18,9 @@ bookWorld.map = { // непосредственно карта
       controls: []
     };
 
-    bookWorld.map.$ = new ymaps.Map(document.getElementById(bookWorld.map.id), options);
+    bookWorld.map.subfilters = new ymaps.Map(document.getElementById(bookWorld.map.id), options);
     bookWorld.map.manager = new ymaps.ObjectManager();
-    bookWorld.map.$.geoObjects.add(bookWorld.map.manager);
+    bookWorld.map.subfilters.geoObjects.add(bookWorld.map.manager);
 
     
 
@@ -36,6 +36,7 @@ bookWorld.map = { // непосредственно карта
   },
   collections: {
     list: {},
+    
     create: function(collectionName) { // создать коллекцию маркеров
       // получить данные коллекции и список подколлекций (писатели, кулинария)
       var collectionData = bookWorld.collections.list[collectionName];
@@ -60,14 +61,14 @@ bookWorld.map = { // непосредственно карта
 
           // сохранить маркер
           markers.push({
-            $: marker,
+            subfilters: marker,
             id: mark.id
           });
         });
 
         // скрыть коллекцию и добавить на карту
         marksCollection.options.set('visible', false);
-        bookWorld.map.$.geoObjects.add(marksCollection);
+        bookWorld.map.subfilters.geoObjects.add(marksCollection);
         
 
         bookWorld.map.collections.list[collectionName] = {
@@ -81,18 +82,38 @@ bookWorld.map = { // непосредственно карта
     },
 
     createMarker: function(mark, color) { // создать маркер
-      
+          
       var marker = new ymaps.Placemark(mark.coords);
-      marker.events.add('click', function() {
 
-        console.log('подборка', mark.name)
+      marker.events.add('click', function() {
+        
+        if (!bookWorld.view.inited) bookWorld.view.init();
+        bookWorld.view.update(mark);
+       	bookWorld.view.subfilters.removeAttribute('data-hidden');
+        
+        var colName = document.getElementsByClassName('collection__name')[0];
+        colName.innerHTML = mark.name;
+
+        console.log('id', mark.id);
+        var elements = document.getElementsByClassName('subfilters');
+        console.log(elements);
+
+       //  for (var i = 0; i < elements.length; i++) {
+  	        
+  	    //    if (mark.id == subcollection.id) {
+  	    //    	elements[i].classList.add("subfilters_blue");
+  	    //    } else {
+  	    //    	elements[i].classList.remove("subfilters_blue");
+  	    //    }
+  	    // }
 
       });
+      
 
       if (mark.geometry) {
-        var border = bookWorld.map.collections.createBorder(mark.geometry, color)
+        var border = bookWorld.map.collections.createBorder(mark.geometry, color);
         
-        bookWorld.map.$.geoObjects.add(border);
+        bookWorld.map.subfilters.geoObjects.add(border);
 
         marker.events
           .add('mouseenter', function() {
@@ -141,17 +162,23 @@ bookWorld.map = { // непосредственно карта
 };
 
 bookWorld.view = { // плашка с карточками
-  $: null,
+ subfilters: null,
   books: [],
   selectors: {
-    $: '.book-world__collection',
-    bookAttr: 'data-book'
+    subfilters: '.book-world__collection',
+    bookAttr: 'data-book',
+    collName: '.collection__name'
+
   },
   inited: false,
   init: function() {
-    bookWorld.view.$ = document.querySelector(bookWorld.view.selectors.$);
+    bookWorld.view.collName = document.querySelector(bookWorld.view.selectors.collName);
+    //вставка соответствующего названия коллекции и выбранного subfilter
+
+
+    bookWorld.view.subfilters = document.querySelector(bookWorld.view.selectors.subfilters);
     for (var i = 0; i < 3; i++) {
-      var book = bookWorld.view.$.querySelector("[" + bookWorld.view.selectors.bookAttr + "='" + (i + 1) + "']");
+      var book = bookWorld.view.subfilters.querySelector("[" + bookWorld.view.selectors.bookAttr + "='" + (i + 1) + "']");
       bookWorld.view.books[i] = new ProductCard({element: book});
     }
     bookWorld.view.inited = true;
@@ -160,11 +187,11 @@ bookWorld.view = { // плашка с карточками
   show: function(subcollection) {
     if (!bookWorld.view.inited) bookWorld.view.init();
     bookWorld.view.update(subcollection);
-    bookWorld.view.$.removeAttribute('data-hidden');
+    bookWorld.view.subfilters.removeAttribute('data-hidden');
   },
 
   hide: function() {
-    bookWorld.view.$.setAttribute('data-hidden', '');
+    bookWorld.view.subfilters.setAttribute('data-hidden', '');
   },
 
   update: function(data) {
@@ -199,17 +226,17 @@ bookWorld.filters = { // непосредственно фильтры
     subcollectionAttr: "data-subcollection",
     search: ".options__search"
   },
-  $: {
+  subfilters: {
     parent: null,
     collections: null,
     subcollections: null,
     search: null
   },
   init: function() {
-    bookWorld.filters.$.parent = document.querySelector(bookWorld.filters.selectors.parent);
-    bookWorld.filters.$.collections = document.querySelector(bookWorld.filters.selectors.collections);
-    bookWorld.filters.$.subcollections = document.querySelector(bookWorld.filters.selectors.subcollections);
-    bookWorld.filters.$.search = document.querySelector(bookWorld.filters.selectors.search);
+    bookWorld.filters.subfilters.parent = document.querySelector(bookWorld.filters.selectors.parent);
+    bookWorld.filters.subfilters.collections = document.querySelector(bookWorld.filters.selectors.collections);
+    bookWorld.filters.subfilters.subcollections = document.querySelector(bookWorld.filters.selectors.subcollections);
+    bookWorld.filters.subfilters.search = document.querySelector(bookWorld.filters.selectors.search);
 
     bookWorld.filters.inited = true;
   },
@@ -222,7 +249,7 @@ bookWorld.filters = { // непосредственно фильтры
      if (!bookWorld.filters.inited) bookWorld.filters.init();
 
      var collectionSelector = "[" + bookWorld.filters.selectors.collectionAttr + "=" + collectionName + "]";
-     bookWorld.filters.list[collectionName] = bookWorld.filters.$.parent.querySelector(collectionSelector);
+     bookWorld.filters.list[collectionName] = bookWorld.filters.subfilters.parent.querySelector(collectionSelector);
 
      bookWorld.filters.subcollections[collectionName] = [];
 
@@ -234,17 +261,32 @@ bookWorld.filters = { // непосредственно фильтры
       var id = subcollection.id;
       var place = subcollection.place;
       var coords = subcollection.coords;
-      var $ =  document.createElement('div');
-      $.setAttribute(bookWorld.filters.selectors.subcollectionAttr, id);
-      $.setAttribute(bookWorld.filters.selectors.collectionAttr, collectionName);
-      $.innerHTML = place;
-      $.onclick = function() {
+      var subfilters =  document.createElement('div');
+      subfilters.className = 'subfilters';
+      subfilters.setAttribute(bookWorld.filters.selectors.subcollectionAttr, id);
+      subfilters.setAttribute(bookWorld.filters.selectors.collectionAttr, collectionName);
+      subfilters.innerHTML = place;
+      
+
+      subfilters.onclick = function() {
+        
+        var elements = document.getElementsByClassName('subfilters');
+        for (var i = 0; i < elements.length; i++) {
+	       elements[i].classList.remove("subfilters_blue");  
+	    }
+        this.classList.add("subfilters_blue");
         bookWorld.collections.showSubcollection(collectionName, id);
-      }
+
+       	var colName = document.getElementsByClassName('collection__name')[0];
+        colName.innerHTML = subcollection.name;
+
+        console.log('id', subcollection.id);
+
+      };
 
       bookWorld.filters.subcollections[collectionName].push({
         id: subcollection.id,
-        $: $
+        subfilters: subfilters
       });
      });
   },
@@ -252,13 +294,14 @@ bookWorld.filters = { // непосредственно фильтры
   activate: function(collectionName) { // выделить фильтр, показать подколлекции 
     var collection = bookWorld.filters.list[collectionName];
     collection.style.color = "#26A9E0";
+   	    
     $('.filters__checkbox', collection).removeClass('filters__not-checkbox');
     $('.filters__checkbox', collection).addClass('filters__yes-checkbox');
 
     var subcollections = bookWorld.filters.subcollections[collectionName];
 	
 	subcollections.forEach(function(subcollection) {
-      bookWorld.filters.$.subcollections.appendChild(subcollection.$);
+      bookWorld.filters.subfilters.subcollections.appendChild(subcollection.subfilters);
     })
   },
   deactivate: function(collectionName) { // убрать выделение, убрать подколлекции
@@ -270,12 +313,14 @@ bookWorld.filters = { // непосредственно фильтры
     var subcollections = bookWorld.filters.subcollections[collectionName];
 
     subcollections.forEach(function(subcollection) {
-      bookWorld.filters.$.subcollections.removeChild(subcollection.$);
+      bookWorld.filters.subfilters.subcollections.removeChild(subcollection.subfilters);
     })
   },
   search: function(val) { // пользовательский поиск среди подколлекций
 
-  }
+  },
+
+
 
 };
 
@@ -348,26 +393,27 @@ bookWorld.collections = { // общий контроллер коллекций
     
     bookWorld.view.show(subcollection);
   },
- 
+
   setActive: function(collectionName) {
     var collection = bookWorld.collections.list[collectionName];
   },
-  
 };
+
+$(document).keyup(function(esc) {
+    if (esc.keyCode == 27) {
+    	bookWorld.view.subfilters.setAttribute('data-hidden', '');
+    	$('.subfilters').removeClass('subfilters_blue');
+    }
+});
+
+$('.collection__close').click(function(){
+	bookWorld.view.subfilters.setAttribute('data-hidden', '');
+    $('.subfilters').removeClass('subfilters_blue');
+});
+
 
 
 
 
 
 ymaps.ready(bookWorld.map.init);
-
-
-
-
-
-
-
-$('.collection__close').click( function(){
-    $('.book-world__collection').hide();
-});
-
