@@ -6,8 +6,7 @@ bookWorld.map = { // непосредственно карта
   id: 'book-map',
   subfilters: null,
   center: [ 4.8928,4.3565],
-  zoom: 3, // начальное увеличение
-  
+  zoom: 3, // начальное увеличение  
   type: "TERRAIN", // тип: физическая, политическая, гибрид
   manager: null,
   initCallbacks: [],
@@ -173,7 +172,8 @@ bookWorld.view = { // плашка с карточками
   books: [],
   selectors: {
     subfilters: '.book-world__collection',
-    bookAttr: 'data-book'
+    bookAttr: 'data-book',
+    buttonAttr: 'data-status'
 
   },
   inited: false,
@@ -185,12 +185,30 @@ bookWorld.view = { // плашка с карточками
       bookWorld.view.books[i] = new ProductCard({element: book});
     }
     bookWorld.view.inited = true;
+
   },
 
   show: function(subcollection) {
     if (!bookWorld.view.inited) bookWorld.view.init();
     bookWorld.view.update(subcollection);
     bookWorld.view.subfilters.removeAttribute('data-hidden');
+
+    var book = document.getElementsByClassName('product-card');
+    
+    for (var i = 0; i < book.length; i++) { 
+      var button = book[i].querySelector("[" + bookWorld.view.selectors.buttonAttr + "]");
+      var buttAttr = button.getAttribute('data-status');
+      
+      button.onclick = function() {
+      
+        if (buttAttr == 'buy') {
+          this.style.backgroundColor = "#8BC53F";
+          this.innerHTML = 'В корзине';
+          this.setAttribute('data-status', 'in-basket');
+        };
+      };
+    };
+    
   },
 
   hide: function() {
