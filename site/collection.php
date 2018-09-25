@@ -53,8 +53,8 @@
 			</div> -->
 			<div class="filters__line"></div>			
 		</div>
-		<div class="filters__search">
-			<img class="filters__img" src="img/search.svg"> <input type="search" />
+		<div class="options__search">
+			<img class="options__img" src="img/search.svg"> <input type="text" id='input-search'/>
 		</div>
 		<div class="options"></div>
 	</div>
@@ -134,6 +134,7 @@
 	<script src="https://new.chitai-gorod.ru/ii/js/events.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js"></script>
 	<script src="product-card-complect/script.js"></script>
 
 	<script src="main.js" type="text/javascript"></script>

@@ -18,16 +18,19 @@
 }
 
 .collection__header {
+	position: relative;
 	min-width: 880px;
 	display: flex;
 	margin-bottom: 31px;
 }
 
-.collection__img{ 
+.collection__img{
+	position: absolute; 
 	margin-right: 19px;	
 }
 
 .collection__name{
+	margin-left: 30px;
 	font-family: PT Sans;
 	font-size: 24px;
 	min-width: 605px;

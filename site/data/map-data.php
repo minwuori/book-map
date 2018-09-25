@@ -310,30 +310,30 @@ $map_data = array(
         ),
         'items' => array(
           array(
-            'title' => '',
-            'author' => '',
-            'link' => '',
-            'img' => '',
-            'price' => '',
-            'id' => '',
+            'title' => 'Путешествуй с удовольствием. Том 29. Япония',
+            'author' => 'Корлева С.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/851360/',
+            'img' => 'https://img-gorod.ru/upload/iblock/971/9714b6748b964fab717b57b713e63703.jpg',
+            'price' => '75',
+            'id' => '2479757',
             'status' => 'buy'
           ),
           array(
-            'title' => '',
-            'author' => '',
-            'link' => '',
-            'img' => '',
-            'price' => '',
-            'id' => '',
+            'title' => 'Япония. Путеводитель',
+            'author' => 'Олтман Дж.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/689436/',
+            'img' => 'https://img-gorod.ru/upload/iblock/637/6371bcfa10e80c9ac3fc11679f7ff778.jpg',
+            'price' => '459',
+            'id' => '2396980',
             'status' => 'in-basket'
           ),
           array(
-            'title' => '',
-            'author' => '',
-            'link' => '',
-            'img' => '',
-            'price' => '',
-            'id' => '',
+            'title' => 'Япония Путеводитель по обычаям и этикету',
+            'author' => 'Норбури П',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/416958/',
+            'img' => 'https://img-gorod.ru/upload/iblock/474/474e0a444aa61173aa0cdc4fe8c1f1ef.jpg',
+            'price' => '159',
+            'id' => '2109337',
             'status' => 'buy'
           )
         )
@@ -397,37 +397,354 @@ $map_data = array(
         ),
         'items' => array(
           array(
-            'title' => '',
-            'author' => '',
-            'link' => '',
-            'img' => '',
-            'price' => '',
-            'id' => '',
+            'title' => 'Путеводитель.Китай',
+            'author' => 'Крюгер Ф., Джан Ша С., Дикарев А.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/692377/',
+            'img' => 'https://img-gorod.ru/upload/iblock/881/881956e2f5c072b2d2f4acc24838a1b4.jpg',
+            'price' => '271',
+            'id' => '2398453',
             'status' => 'buy'
           ),
           array(
-            'title' => '',
-            'author' => '',
-            'link' => '',
-            'img' => '',
-            'price' => '',
-            'id' => '',
+            'title' => 'Китай в кармане. Путеводитель',
+            'author' => 'Голомолзин Е., Землянская Н.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/687721/?watch_fromlist=search_result',
+            'img' => 'https://img-gorod.ru/upload/iblock/a66/a66bdb4d11768b2701ac26117fbd2aa6.jpg',
+            'price' => '215',
+            'id' => '2396108',
             'status' => 'in-basket'
           ),
           array(
-            'title' => '',
-            'author' => '',
-            'link' => '',
-            'img' => '',
-            'price' => '',
-            'id' => '',
+            'title' => 'Китай. Все тонкости',
+            'author' => 'Кузина А.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1061809/?watch_fromlist=search_result',
+            'img' => 'https://img-gorod.ru/upload/iblock/d40/d40c09917bfdf3ae489d89afa7da79e1.jpg',
+            'oldPrice' => '301',
+            'price' => '270',
+            'id' => '2661784',
+            'status' => 'buy'
+          )
+        )
+      ),
+    )
+  ),
+	
+	'languages' => array(
+    'title' => 'Языки',
+    'color' => "#f09918",
+    'marks' => array(
+      array(
+        'id' => '819745',
+        'name' => 'Бестселлеры на языке оригинала',
+        'place' => 'Бестселлеры на языке оригинала',
+        'coords' => array(51.4814,-0.0825),
+        'link' => 'https://www.chitai-gorod.ru/collections/819745/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'What Dreams May Come: Intermediate',
+            'author' => 'Matheson R.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1054434/',
+            'img' => 'https://img-gorod.ru/upload/iblock/dca/dca651a4c610fbcf42876bf80b68ff8f.jpg',
+            'price' => '176',
+            'id' => '2655274',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Jonathan Livingston Seagull. Selected Stories= Чайка по имени Джонатан Ливингстон. Книга для чтения на английском языке. Уровень B1',
+            'author' => 'Bath R.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1050895/',
+            'img' => 'https://img-gorod.ru/upload/iblock/2c7/2c7b4ddef9ae468c485fda9d82a11478.jpg',
+            'price' => '129',
+            'id' => '2651830',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'The Dream-Woman & The Family Secret',
+            'author' => 'Collins W.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1046564/',
+            'img' => 'https://img-gorod.ru/upload/iblock/0d1/0d157d48463ea1dd1c4e2e7e4c657bc9.jpg',
+            'price' => '231',
+            'id' => '2647620',
+            'status' => 'buy'
+          )
+        )
+      ),
+      array(
+        'id' => '907435',
+        'name' => 'Новые имена. Российская проза',
+        'place' => 'Новые имена. Российская проза',
+        'coords' => array(55.6374,37.9742),
+        'link' => 'https://www.chitai-gorod.ru/collections/907435/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'Вечность во временное пользование',
+            'author' => 'Шульженко И.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/994346/',
+            'img' => 'https://img-gorod.ru/upload/iblock/5b9/5b9dfa7d3b5bddc34f63f1c5f6068299.jpg',
+            'price' => '609',
+            'id' => '2601056',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Жизнь: вид сбоку. Повести и рассказы',
+            'author' => 'Староверов А.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/969233/',
+            'img' => 'https://img-gorod.ru/upload/iblock/179/1794b26f8b1a6385868ac4c3a77e77c6.jpg',
+            'price' => '346',
+            'id' => '2582734',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'Восемнадцать плюс. Стихи',
+            'author' => 'Кащеев А.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/978978/',
+            'img' => 'https://img-gorod.ru/upload/iblock/3aa/3aac27bfac5aeb9fe54e6a1922b25f06.jpg',
+            'price' => '299',
+            'id' => '2589385',
+            'status' => 'buy'
+          )
+        )
+      ),
+    )
+  ),
+  
+  'cookery' => array(
+    'title' => 'Кулинария',
+    'color' => "#74489d",
+    'marks' => array(
+      array(
+        'id' => '819534',
+        'name' => 'Вина и напитки мира',
+        'place' => 'Вина и напитки мира',
+        'coords' => array(48.8573,58.1890),
+        'link' => 'https://www.chitai-gorod.ru/collections/819534/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'Вина. Иллюстрированный гид',
+            'author' => 'Шпаковский М.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1042278/',
+            'img' => 'https://img-gorod.ru/upload/iblock/3a3/3a321629f2fd674fcfc145e5dc065bb7.jpg',
+            'price' => '469',
+            'id' => '2642635',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Искусство винокурения. Большая практическая энциклопедия',
+            'author' => 'Йонсон Я.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1021858/',
+            'img' => 'https://img-gorod.ru/upload/iblock/4b7/4b7453914ab480ad6f3b41b9393c6210.jpg',
+            'price' => '1112',
+            'id' => '2624417',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'Бухло',
+            'author' => 'Тузмухамедов Э.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1030213/',
+            'img' => 'https://img-gorod.ru/upload/iblock/1e6/1e6344d278c498a0c2e3524ab07e1e09.jpg',
+            'price' => '556',
+            'id' => '2631984',
+            'status' => 'buy'
+          )
+        )
+      ),
+      array(
+        'id' => '819532',
+        'name' => 'Готовить много вкусного для близких',
+        'place' => 'Готовить много вкусного для близких',
+        'coords' => array(53.9541,-104.5305),
+        'link' => 'https://www.chitai-gorod.ru/collections/819532/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'Русская кухня Елены Молоховец',
+            'author' => 'Молоховец Е.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1035767/',
+            'img' => 'https://img-gorod.ru/upload/iblock/02f/02f4c5a24487dbfd3da0332c5799d7ce.jpg',
+            'price' => '445',
+            'id' => '2637444',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Татарская кухня',
+            'author' => 'Поливалина Л.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1034015/',
+            'img' => 'https://img-gorod.ru/upload/iblock/8c7/8c74b3da82847bca6de68f4fe53e737e.jpg',
+            'price' => '526',
+            'id' => '2635642',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'Скандинавская кухня. Простая и уютная еда на любой случай',
+            'author' => 'Аурель Б.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1032276/',
+            'img' => 'https://img-gorod.ru/upload/iblock/31a/31ab307a013d0c6cbd0757862b700e17.jpg',
+            'price' => '667',
+            'id' => '2633883',
+            'status' => 'buy'
+          )
+        )
+      ),
+      array(
+        'id' => '897325',
+        'name' => 'Идеи для пикника',
+        'place' => 'Идеи для пикника',
+        'coords' => array(24.8148,18.3099),
+        'link' => 'https://www.chitai-gorod.ru/collections/897325/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'Мясо: 100 правил, историй, рецептов',
+            'author' => 'Ивенская О.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/873364/',
+            'img' => 'https://img-gorod.ru/upload/iblock/dfe/dfe3fc90a7e9758d7f5ea84d18766199.jpg',
+            'price' => '123',
+            'id' => '2497783',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Мангал, гриль, барбекю и не только. Энциклопедия лучших блюд на открытом огне',
+            'author' => 'Першин П., Полетаев К.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/854246/',
+            'img' => 'https://img-gorod.ru/upload/iblock/9c1/9c1dcaaab02142220950fd0fe876f67e.jpg',
+            'price' => '782',
+            'id' => '2481699',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'Казан, мангал и барбекю. Лучшие блюда на свежем воздухе',
+            'author' => 'Солнечная М.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/845244/',
+            'img' => 'https://img-gorod.ru/upload/iblock/2da/2da354e38f59cafd4f93e19d5747ba85.jpg',
+            'price' => '302',
+            'id' => '2475313',
+            'status' => 'buy'
+          )
+        )
+      ),
+    )
+  ),
+  
+    'cookery' => array(
+    'title' => 'Исскуство',
+    'color' => "#0084ff",
+    'marks' => array(
+      array(
+        'id' => '897329',
+        'name' => 'Пленэр. Уроки рисования',
+        'place' => 'Пленэр. Уроки рисования',
+        'coords' => array(63.3505,97.4435),
+        'link' => 'https://www.chitai-gorod.ru/collections/897329/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'Нарисуй пейзажи акварелью. Средиземноморье. Ты - художник!',
+            'author' => 'Керси Дж.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/955392/',
+            'img' => 'https://img-gorod.ru/upload/iblock/418/418f34ebcbdba625984e82a2454454a5.jpg',
+            'price' => '216',
+            'id' => '2571316',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Начни рисовать. Пошаговые техники для тех, кто хочет стать художников за 5 минут',
+            'author' => 'Лутц Э.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/954807/',
+            'img' => 'https://img-gorod.ru/upload/iblock/539/53982debffc7019db20c9c851e0e6ea1.jpg',
+            'price' => '593',
+            'id' => '2571601',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'Кисти. Искусство и техника использования',
+            'author' => 'Кардон М.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/952548/',
+            'img' => 'https://img-gorod.ru/upload/iblock/b51/b512e93c8f31b61ba76014317cd26ec7.jpg',
+            'price' => '502',
+            'id' => '2569369',
+            'status' => 'buy'
+          )
+        )
+      ),
+      array(
+        'id' => '833902',
+        'name' => 'Великие художники',
+        'place' => 'Великие художники',
+        'coords' => array(43.2750,-95.1401),
+        'link' => 'https://www.chitai-gorod.ru/collections/833902/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'Паоло Веронезе',
+            'author' => 'Астахов Е.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1044003/',
+            'img' => 'https://img-gorod.ru/upload/iblock/004/00449094e3055e4f18b17fcafea1e093.jpg',
+            'price' => '3591',
+            'id' => '2644238',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Диего Веласкес',
+            'author' => 'Астахов Ю.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1044001/',
+            'img' => 'https://img-gorod.ru/upload/iblock/a95/a9588cbaffd3d1e0d758d7b478d0509b.jpg',
+            'price' => '3591',
+            'id' => '2644236',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'Босх, Брейгель, Дюрер',
+            'author' => 'Морозова О., Котельникова Т., Королева А.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1032167/',
+            'img' => 'https://img-gorod.ru/upload/iblock/f63/f63e41944d915f6d1e2443f26fe4abc5.jpg',
+            'price' => '1971',
+            'id' => '2633763',
+            'status' => 'buy'
+          )
+        )
+      ),
+      array(
+        'id' => '833906',
+        'name' => 'Музеи мира',
+        'place' => 'Музеи мира',
+        'coords' => array(-1.8533,25.7248),
+        'link' => 'https://www.chitai-gorod.ru/collections/833906/',
+        'geometry' => array(        ),
+        'items' => array(
+          array(
+            'title' => 'Государева оружейная палата',
+            'author' => 'Комаров И. и др.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1040851/',
+            'img' => 'https://img-gorod.ru/upload/iblock/2f4/2f45887b56556846f1d57860b13665fe.jpg',
+            'price' => '1254',
+            'id' => '2140132',
+            'status' => 'buy'
+          ),
+          array(
+            'title' => 'Музей Гронинге. Брюгге',
+            'author' => 'Милюгина Е.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/1013969/',
+            'img' => 'https://img-gorod.ru/upload/iblock/98c/98cd543cb4b5b4d1396b263e8f717daf.jpg',
+            'price' => '3014',
+            'id' => '2616732',
+            'status' => 'in-basket'
+          ),
+          array(
+            'title' => 'Музей искусств. Лос-Анджелес',
+            'author' => 'Милюгина Е.',
+            'link' => 'https://www.chitai-gorod.ru/catalog/book/995454/',
+            'img' => 'https://img-gorod.ru/upload/iblock/3eb/3eb91a3bf0858a8c499fab21c72a993a.jpg',
+            'price' => '3014',
+            'id' => '2602126',
             'status' => 'buy'
           )
         )
       ),
     )
   )
-
   
 
 );

@@ -104,7 +104,7 @@ ProductCard.prototype.setButton = function() {
   
 
   button.setAttribute('data-status', this.status);
-  button.classList.add('button,product-card__button');
+  button.classList.add('button', 'product-card__button');
 
   if (ProductCard.buttonEvents[this.status])
     button.onclick = ProductCard.buttonEvents[this.status].bind(this);
