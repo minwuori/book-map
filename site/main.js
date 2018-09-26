@@ -93,6 +93,9 @@ bookWorld.map = { // непосредственно карта
         var colName = document.getElementsByClassName('collection__name')[0];
         colName.innerHTML = mark.name;
 
+        var map = document.getElementById('book-map');
+        map.style.bottom = '450px';
+
         var subfilters, i;
 
         for (i = 0; subfilters = document.getElementsByClassName('subfilters')[i]; i++) {
@@ -103,18 +106,9 @@ bookWorld.map = { // непосредственно карта
             subfilters.classList.add("subfilters_blue");
           } else {
             subfilters.classList.remove("subfilters_blue");
-          };
-        };
+          }
+        }
 
-        // var massiv = [];
-        // subfilters = document.getElementsByClassName('subfilters');
-        
-        //     for (i = 0; i < subfilters.length; i++) {
-        //       massiv[i] = subfilters[i].innerHTML;
-              
-        //     };
-        //     console.log(massiv);
-     
       });
 
       if (mark.geometry) {
@@ -193,21 +187,7 @@ bookWorld.view = { // плашка с карточками
     bookWorld.view.update(subcollection);
     bookWorld.view.subfilters.removeAttribute('data-hidden');
 
-    var book = document.getElementsByClassName('product-card');
     
-    for (var i = 0; i < book.length; i++) { 
-      var button = book[i].querySelector("[" + bookWorld.view.selectors.buttonAttr + "]");
-      var buttAttr = button.getAttribute('data-status');
-      
-      button.onclick = function() {
-      
-        if (buttAttr == 'buy') {
-          this.style.backgroundColor = "#8BC53F";
-          this.innerHTML = 'В корзине';
-          this.setAttribute('data-status', 'in-basket');
-        };
-      };
-    };
     
   },
 
@@ -234,8 +214,24 @@ bookWorld.view = { // плашка с карточками
         status: bookData.status
       });
 
-    })
+    });
+    var book = document.getElementsByClassName('product-card');
+    
+    for (var i = 0; i < book.length; i++) { 
+      var button = book[i].querySelector("[" + bookWorld.view.selectors.buttonAttr + "]");
+      var buttAttr = button.getAttribute('data-status');
+      
+      button.onclick = function() {
+        if (buttAttr == 'buy') {
+          this.style.backgroundColor = "#8BC53F";
+          this.innerHTML = 'В корзине';
+          this.setAttribute('data-status', 'in-basket');
+        }
+      };
+
+    };
   }
+
 };
 
 bookWorld.filters = { // непосредственно фильтры
@@ -303,8 +299,14 @@ bookWorld.filters = { // непосредственно фильтры
         this.classList.add("subfilters_blue");
         bookWorld.collections.showSubcollection(collectionName, id);
 
+        var map = document.getElementById('book-map');
+        map.style.bottom = '450px';
+
        	var colName = document.getElementsByClassName('collection__name')[0];
         colName.innerHTML = subcollection.name;
+
+        bookWorld.map.subfilters.panTo(coords, {flying: 1});//перемещение к метке
+        
       };
 
 
@@ -445,13 +447,25 @@ $(document).keyup(function(esc) {
     if (esc.keyCode == 27) {
     	bookWorld.view.subfilters.setAttribute('data-hidden', '');
     	$('.subfilters').removeClass('subfilters_blue');
+      $('#book-map').css('bottom', '0px');
     }
 });
 
 $('.collection__close').click(function(){
 	bookWorld.view.subfilters.setAttribute('data-hidden', '');
     $('.subfilters').removeClass('subfilters_blue');
+    $('#book-map').css('bottom', '0px');
 });
+
+function showMap() {
+  $('.bg').fadeOut(500);
+  $('.overlap').fadeOut(500);
+  $('.logo').fadeOut(500);
+  $('.book-world__filters').addClass('filters__move-right');
+  $('#book-map').css('left', '273px');
+};
+  
+
 
 
 ymaps.ready(bookWorld.map.init);

@@ -17,7 +17,7 @@
 .logo {
 	position: relative;
 	width: 225px;
-	z-index: 1;
+	z-index: 2;
 	text-align: center;
 	margin: 25px auto 0;
 	vertical-align:middle;

@@ -18,8 +18,74 @@
 	<div class="book-world__map">
 		<div id="book-map"></div>
 	</div>
+	<div class="bg"></div>
+	
+	<div class="logo"><a href="https://www.chitai-gorod.ru/"><img src="img/logo.svg"></a></div>
+
+	<div class="overlap">
+		
+		<div class="info">
+
+			<div class="info__title">Книжная карта мира</div>
+			<div class="info__subtitle">У каждой страны свои сокровища. <br />
+			Выбирайте страну и отправляйтесь в книжное путешествие</div>
+
+			<div class="countries-blocks">
+
+				<div class="countries-block">
+					<a href="#">
+						<div class="countries-block__image">
+							<img src="" alt="">
+						</div>
+						<div class="countries-block__title">Испания</div>
+					</a>
+				</div>
+
+				<div class="countries-block">
+					<a href="#">
+						<div class="countries-block__image">
+							<img src="" alt="">
+						</div>
+						<div class="countries-block__title">Германия</div>
+					</a>
+				</div>
+
+				<div class="countries-block">
+					<a href="#">
+						<div class="countries-block__image">
+							<img src="img/moscow.svg" alt="" >
+						</div>
+						<div class="countries-block__title">Москва</div>
+					</a>
+				</div>
+
+				<div class="countries-block">
+					<a href="#">
+						<div class="countries-block__image">
+							<img src="" alt="">
+						</div>
+						<div class="countries-block__title">Франция</div>
+					</a>
+				</div>
+
+				<div class="countries-block">
+					<a href="#">
+						<div class="countries-block__image">
+							<img src="img/mm.jpg" alt="">
+						</div>
+						<div class="countries-block__title">Рим</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="button-map" onclick="showMap()">Изучить карту</div>
+
+		</div>
+		
+	</div>
+
 	<div class="book-world__filters">
-		<div class="filters__logo"><img src="img/logo_blue.svg"></div>
+		<div class="filters__logo"><a href="https://www.chitai-gorod.ru/"><img src="img/logo_blue.svg"></a></div>
 		<div class="filters"> 
 			<div class="filters__text">Показать:</div>
 			

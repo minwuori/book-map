@@ -11,10 +11,14 @@
 	background: white;
 	box-shadow: 9px -1px 33px -21px #000000;
 	padding: 25px;
+	transition: margin-bottom 0.5s ease-in-out;
+	-webkit-transition: margin-bottom 0.5s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: margin-bottom 0.5s ease-in-out; /** Firefox **/
+    -o-transition: margin-bottom 0.5s ease-in-out; /** Opera **/
 }
 
 .book-world__collection[data-hidden] {
-	margin-bottom: -100%;
+	margin-bottom: -479px;
 }
 
 .collection__header {
@@ -41,7 +45,7 @@
 .collection__link {
 	font-family: Roboto;
 	font-size: 16px;
-	line-height: 19px;
+	line-height: 23px;
 	color: rgba(0, 0, 0, 0.3);
 }
 
