@@ -243,6 +243,7 @@
     border-radius: 3px;
     cursor: pointer;
     min-width: 108px;
+    outline: none;
 }
 
 .product-card__button {

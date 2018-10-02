@@ -5,8 +5,9 @@
 	left: 271px;
 	right: 0;
 	bottom: 0; 
-	/*z-index: 1;
- 	width: 882px;	*/
+	/*z-index: 1;*/
+ 	min-width: 300px;	
+ 	overflow-y: hidden;
  	height: 479px;
 	background: white;
 	box-shadow: 9px -1px 33px -21px #000000;
